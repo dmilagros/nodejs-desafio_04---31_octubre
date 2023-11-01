@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, existsSync, readdirSync } from 'fs';
+import { readFileSync, writeFileSync } from 'fs';
 
 const filePathTested = './src/public/archivo.json';
 
@@ -20,37 +20,6 @@ export default class ProductManager {
     } catch (error) {
       console.error(`Error al leer el archivo: ${error.message}`);
     }
-
-		/* 
-		validate if json file exists
-		if (existsSync(filePathTested)) {
-			try {
-				// Leer el contenido del archivo
-				const content = readFileSync(filePathTested, 'utf8');
-				console.log('Contenido del archivo:', content);
-			} catch (error) {
-				console.error('Error al leer el archivo:', error);
-			}
-		} else {
-			console.log('El archivo no existe.');
-		} */
-
-
-		/* 
-		validate files in path
-		try {
-			const files = readdirSync(directoryPath);
-			if (files.length > 0) {
-				console.log('Archivos en la carpeta public:');
-				files.forEach((file) => {
-					console.log(file);
-				});
-			} else {
-				console.log('La carpeta public está vacía.');
-			}
-		} catch (error) {
-			console.error('Error al leer la carpeta:', error);
-		} */
   }
 
   saveProducts() {

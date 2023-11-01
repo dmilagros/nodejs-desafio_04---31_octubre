@@ -136,26 +136,3 @@ routerCarts.post("/:cid/product/:pid", (req, res) => {
     });
   }
 });
-
-// * http://localhost:8080/api/carts/100102
-/* routerCarts.delete("/:pid", (req, res) => {
-	const id = Number(req.params.pid);
-  const indice = carritos.findIndex((p) => p.id === id);
-
-	if (indice == -1) {
-
-		return res.status(404).json({
-			status: "error",
-      msg: `error el carrito de id ${id} no existe`,
-      data: {},
-    });
-  } else {
-		cartManager.deleteCart(id);
-
-    return res.status(200).json({
-      status: "success",
-      msg: `El carrito de id: ${id} fue eliminado correctamente`,
-			data: {},
-    });
-  }
-}); */
